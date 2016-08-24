@@ -1,0 +1,14 @@
+{
+	"name": "Twitter Volume Control",
+	"version": "1.0",
+	"description": "Adds a volume control to twitter",
+	"icons": { "48": "icon48.png", "128": "icon128.png" },
+	"content_scripts": [
+		{
+			"matches": ["https://twitter.com/i/videos/*"],
+			"js": ["script.js"],
+			"all_frames": true
+		}
+	],
+	"manifest_version": 2
+}
