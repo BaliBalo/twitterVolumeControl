@@ -9,16 +9,8 @@
 	var storageKey = 'tvc-volume';
 	// -------------------
 	
-	var video = null;
 	var soundButton = document.querySelector('.sound-button');
 	if(!soundButton) return;
-	
-	function waitForVideo() {
-		video = document.querySelector('video');
-		if(!video) requestAnimationFrame(waitForVideo);
-		else videoReady();
-	}
-	waitForVideo();
 	
 	var barTop = (controllerHeight - trackHeight) / 2;
 	
@@ -53,6 +45,14 @@
 	ball.style.top = barTop + 'px';
 	var hbs = ballSize / 2;
 	ball.style.margin = '-'+hbs+'px 0 0 -'+hbs+'px';
+	
+	var video = null;
+	function waitForVideo() {
+		video = document.querySelector('video');
+		if(!video) requestAnimationFrame(waitForVideo);
+		else videoReady();
+	}
+	waitForVideo();
 	
 	function videoReady() {
 		var stored = localStorage.getItem(storageKey);
