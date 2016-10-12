@@ -19,6 +19,8 @@
 	var trackPos = (controllerSize - trackSize) / 2;
 	
 	soundButton.style.position = 'relative';
+	soundButton.style.marginRight = '15px';
+	soundButton.style.marginTop = '0';
 	soundButton.style.transition = 'margin-right '+transitionTime;
 	var wrapper = document.createElement('div');
 	wrapper.style.position = 'absolute';
@@ -51,6 +53,13 @@
 	ball.style.top = '50%';
 	var hbs = ballSize / 2;
 	ball.style.margin = '-'+hbs+'px 0 0 -'+hbs+'px';
+	
+	// Move it to the left
+	var leftSide = document.querySelector('.player-controls-bottom-left');
+	if(leftSide) leftSide.appendChild(soundButton);
+	
+	var timeDisplay = document.querySelector('time-display');
+	if(timeDisplay) timeDisplay.style.marginRight = '15px';
 	
 	var video = null;
 	function waitForVideo() {
