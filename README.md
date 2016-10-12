@@ -1,5 +1,10 @@
 # Twitter Volume Control
 
+*UPDATE* : Twitter finally added a volume bar to their video player. This extension is not useful anymore.
+Thanks for the support.
+
+----
+
 Adds a volume bar to native Twitter videos.
 
 No support for Vine videos.
