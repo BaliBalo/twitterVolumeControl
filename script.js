@@ -58,8 +58,13 @@
 	var leftSide = document.querySelector('.player-controls-bottom-left');
 	if(leftSide) leftSide.appendChild(soundButton);
 	
-	var timeDisplay = document.querySelector('time-display');
-	if(timeDisplay) timeDisplay.style.marginRight = '15px';
+	var nativeSlider = document.querySelector('.volume-control-container');
+	if(nativeSlider) nativeSlider.style.display = 'none';
+	
+	var timeDisplayStyle = document.createElement('style');
+	timeDisplayStyle.type = 'text/css';
+	timeDisplayStyle.appendChild(document.createTextNode('.time-display { margin-right: 15px; }'));
+	document.head.appendChild(timeDisplayStyle);
 	
 	var video = null;
 	function waitForVideo() {
